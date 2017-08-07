@@ -18,15 +18,15 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one',function(req, res){
-   req.send('Article one requested and will be served here'); 
+   res.send('Article one requested and will be served here'); 
 });
 
 app.get('/article-two',function(req, res){
-   req.send('Article two requested and will be served here'); 
+   res.send('Article two requested and will be served here'); 
 });
 
 app.get('/article-three',function(req, res){
-   req.send('Article three requested and will be served here'); 
+   res.send('Article three requested and will be served here'); 
 });
 
 
