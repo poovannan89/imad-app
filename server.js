@@ -5,10 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+    'article-one' : {
     title: 'Article One | Pooh',
     heading: 'Article One',
-    date: 'Aug 9, 2017',
+    date: 'Aug 7, 2017',
     content: `<p>
                     India have brought in left-arm spin-bowling allrounder Axar Patel for the Pallekele Test, as a replacement for the suspended Ravindra Jadeja. He will be the third spinner in the squad behind offspinner R Ashwin and left-arm wristspinner Kuldeep Yadav.
                 </p>
@@ -16,7 +17,23 @@ var articleOne = {
                     Axar is yet to make his debut in Test cricket, but has played 30 ODIs and seven T20 internationals. He has played 23 first-class matches and taken 79 wickets at 30.37. He has just finished playing the 50-over tri-series in South Africa with India A. He finished the team's third-highest wicket-taker in the series with seven wickets in four games and an economy rate of 4.11.
                 </p>
     `
+},
+'article-two' : {
+    title: 'Article Two | Pooh',
+    heading: 'Article Two',
+    date: 'Aug 8, 2017',
+    content: `Content for second article
+    `
+},
+'article-three' : {
+    title: 'Article One | Pooh',
+    heading: 'Article Three',
+    date: 'Aug 9, 2017',
+    content: `Content for 3rd article
+    `
+}
 };
+
 
 function createTemplate (data) {
     var title = data.title;
@@ -67,18 +84,9 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/article-one',function(req, res){
-   res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req, res){
+   res.send(createTemplate(articles[articleOne]));
 });
-
-app.get('/article-two',function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three',function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
-
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
