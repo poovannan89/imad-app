@@ -45,6 +45,8 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
+    var commentbox = data.commentbox;
+    var submitcmt = data.submitcmt;
     var htmlTemplate = `
     <html>
         <head>
