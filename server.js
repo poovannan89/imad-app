@@ -130,7 +130,7 @@ var cmtlist1=[];
 var cmtlist2=[];
 var cmtlist3=[];
 
-app.get('/submit-comment1/',function(req, res) {
+app.get('/article-one/submit-comment1/',function(req, res) {
     res.send("Hello from server");
     var cmt = req.query.cmt;
     cmtlist1.push(cmt);
