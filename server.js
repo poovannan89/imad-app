@@ -18,7 +18,9 @@ var articles = {
                 </p>
     `,
     commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
+    commentlist: `<ul id='commentlist'>
+            </ul>`
 },
 'article-two' : {
     title: 'Article Two | Pooh',
@@ -26,7 +28,9 @@ var articles = {
     date: 'Aug 8, 2017',
     content: `Content for second article`,
     commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
+    commentlist: `<ul id='commentlist'>
+            </ul>`
 },
 'article-three' : {
     title: 'Article One | Pooh',
@@ -35,7 +39,9 @@ var articles = {
     content: `Content for 3rd article
     `,
     commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
+    commentlist: `<ul id='commentlist'>
+            </ul>`
 }
 };
 
@@ -47,6 +53,7 @@ function createTemplate (data) {
     var content = data.content;
     var commentbox = data.commentbox;
     var submitcmt = data.submitcmt;
+    var commentlist = data.commentlist;
     var htmlTemplate = `
     <html>
         <head>
@@ -75,6 +82,9 @@ function createTemplate (data) {
                     ${commentbox}
                 </div>
                 ${submitcmt}
+                <div>
+                ${commentlist}
+                </div>
             </div>
             
         </body>
@@ -119,7 +129,6 @@ app.get('/submit-name/', function(req, res) { //URL: /submit-name?name=xxxxx
 var cmtlist1=[];
 var cmtlist2=[];
 var cmtlist3=[];
-app.get('')
 
 app.get('/:articleName',function(req, res){
    var articleName = req.params.articleName;            
