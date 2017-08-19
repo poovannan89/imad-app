@@ -93,11 +93,6 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/:articleName',function(req, res){
-   var articleName = req.params.articleName;            
-   res.send(createTemplate(articles[articleName]));
-});
-
 var names=[];
 app.get('/submit-name/', function(req, res) { //URL: /submit-name?name=xxxxx
    //Get the name from the request object
@@ -108,6 +103,12 @@ app.get('/submit-name/', function(req, res) { //URL: /submit-name?name=xxxxx
    // JSON : Java script object notation. Convert java script objects into array of strin
    res.send(JSON.stringify(names));
 });
+
+app.get('/:articleName',function(req, res){
+   var articleName = req.params.articleName;            
+   res.send(createTemplate(articles[articleName]));
+});
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
