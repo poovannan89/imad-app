@@ -31,12 +31,12 @@ submit.onclick = function() {
 };
 
 
-var submit_cmt = document.getElementById('submit_cmt');
-submit_cmt.onclick = function() {
+var submit_cmt1 = document.getElementById('submit_cmt1');
+submit_cmt1.onclick = function() {
     var request = new XMLHttpRequest();
-    var cmtInput= document.getElementById('commentBodyField');
+    var cmtInput= document.getElementById('commentBodyField1');
     var cmt = cmtInput.value;
-    request.open('GET','http://poovannancse.imad.hasura-app.io/submit-comment?cmt=' + cmt,true);
+    request.open('GET','http://poovannancse.imad.hasura-app.io/submit-comment1?cmt=' + cmt,true);
     request.send(null);
 }; 
 //Submit name 
