@@ -116,6 +116,11 @@ app.get('/submit-name/', function(req, res) { //URL: /submit-name?name=xxxxx
    res.send(JSON.stringify(names));
 });
 
+var cmtlist1=[];
+var cmtlist2=[];
+var cmtlist3=[];
+app.get('')
+
 app.get('/:articleName',function(req, res){
    var articleName = req.params.articleName;            
    res.send(createTemplate(articles[articleName]));
