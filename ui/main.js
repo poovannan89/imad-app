@@ -7,6 +7,27 @@ button.onclick = function() {
 
 };
 
+var submitcmt = document.getElementById('submit_cmt');
+submitcmt.onclick = function() {
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function () {
+        if (request.readyState == XMLHttpRequest.DONE) {
+            if (request.status == 200) {
+                var comments = request.responseText;
+                comments = JSON.parse(comments);
+                var listofcmts = '';
+                for(var i=0; i<comments.length;i++) {
+                    listofcmts += '<li>' + comments[i] + '</li>';
+                }
+                var ul = document.getElementById('commentlist');
+                ul.innerHTML = listofcmts;
+            }
+        }
+    };
+    request.open('GET','http://poovannancse.imad.hasura-app.io/submit-comment', true);
+    request.send(null);
+};
 //Submit name 
 
 var submit = document.getElementById('submit_btn');
