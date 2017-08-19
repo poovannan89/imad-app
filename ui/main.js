@@ -17,7 +17,9 @@ submit_cmt.onclick = function() {
             }
         }
     };
-    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment',true);
+    var cmtInput= document.getElementById('commentBodyField');
+    var cmt = cmtInput.value;
+    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
     request.send(null);
 };
 //Submit name 
