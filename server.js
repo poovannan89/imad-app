@@ -17,9 +17,9 @@ var articles = {
                     Axar is yet to make his debut in Test cricket, but has played 30 ODIs and seven T20 internationals. He has played 23 first-class matches and taken 79 wickets at 30.37. He has just finished playing the 50-over tri-series in South Africa with India A. He finished the team's third-highest wicket-taker in the series with seven wickets in four games and an economy rate of 4.11.
                 </p>
     `,
-    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
-    commentlist: `<ul id='commentlist'>
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField1" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt1"></input>',
+    commentlist: `<ul id="commentlist1">
             </ul>`
 },
 'article-two' : {
@@ -27,9 +27,9 @@ var articles = {
     heading: 'Article Two',
     date: 'Aug 8, 2017',
     content: `Content for second article`,
-    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
-    commentlist: `<ul id='commentlist'>
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField2" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt2"></input>',
+    commentlist: `<ul id="commentlist2">
             </ul>`
 },
 'article-three' : {
@@ -38,9 +38,9 @@ var articles = {
     date: 'Aug 9, 2017',
     content: `Content for 3rd article
     `,
-    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
-    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>',
-    commentlist: `<ul id='commentlist'>
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField3" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt3"></input>',
+    commentlist: `<ul id="commentlist3">
             </ul>`
 }
 };
