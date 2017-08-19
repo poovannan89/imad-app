@@ -1,7 +1,7 @@
 
 var submit_cmt = document.getElementById('submit_cmt');
 submit_cmt.onclick = function() {
-    alert('inside onclick')
+    alert('inside onclick');
     var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
         if (request.readyState == XMLHttpRequest.DONE) {
