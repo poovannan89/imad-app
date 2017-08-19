@@ -132,15 +132,19 @@ var cmtlist3=[];
 
 app.get('/:articleName/submit-comment/',function(req, res) {
     var articleName = req.params.articleName;
+    var cmt = req.query.cmt;
     if(articleName.toString().trim() == "article-one") {
-        
+        cmtlist1.push(cmt);
+        res.send(JSON.stringify(cmtlist1));
     }
     else if(articleName.toString().trim() == "article-two") {
-        
+        cmtlist2.push(cmt);
+        res.send(JSON.stringify(cmtlist2));
     }
     else 
     {
-        
+        cmtlist3.push(cmt);
+        res.send(JSON.stringify(cmtlist3));
     }
 });
 
