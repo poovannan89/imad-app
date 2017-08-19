@@ -64,8 +64,11 @@ function createTemplate (data) {
                 <div>
                    ${content}
                 </div>
+                <div>
+                <textarea rows="4" cols="50" name="comment">Enter text here</textarea>
+                </div>
             </div>
-            <textarea name="comment">Enter text here</textarea>
+            
         </body>
     </html>
     `;    
