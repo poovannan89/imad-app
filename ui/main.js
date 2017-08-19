@@ -1,32 +1,4 @@
 
-/*
-var submit_cmt = document.getElementById('submit_cmt');
-submit_cmt.onclick = function() {
-    alert("inside onclick");
-    /*
-    var request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
-        if (request.readyState == XMLHttpRequest.DONE) {
-            if(request.status == 200) {
-                var commentlist = request.responseText;
-                commentList = JSON.parse(commentList);
-                var list ='';
-                for(var i=0; i<commentList.length; i++) {
-                    list += '<li>' + commentList[i] + '</li>';
-                }
-                    var ul = document.getElementById('commentlist');
-                    ul.innerHTML = list;
-            }
-        }
-    };
-    var cmtInput= document.getElementById('commentBodyField');
-    var cmt = cmtInput.value;
-    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
-    request.send(null);
-}; */
-//Submit name 
-
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function() {
     //Create a request object
@@ -57,3 +29,31 @@ submit.onclick = function() {
     request.open('GET','http://poovannancse.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
 };
+
+
+var submit_cmt = document.getElementById('submit_cmt');
+submit_cmt.onclick = function() {
+    alert("inside onclick");
+    /*
+    var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+        if (request.readyState == XMLHttpRequest.DONE) {
+            if(request.status == 200) {
+                var commentlist = request.responseText;
+                commentList = JSON.parse(commentList);
+                var list ='';
+                for(var i=0; i<commentList.length; i++) {
+                    list += '<li>' + commentList[i] + '</li>';
+                }
+                    var ul = document.getElementById('commentlist');
+                    ul.innerHTML = list;
+            }
+        }
+    };
+    var cmtInput= document.getElementById('commentBodyField');
+    var cmt = cmtInput.value;
+    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
+    request.send(null);*/
+}; 
+//Submit name 
+
