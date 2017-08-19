@@ -36,7 +36,7 @@ submit_cmt1.onclick = function() {
     var request = new XMLHttpRequest();
     var cmtInput= document.getElementById('commentBodyField1');
     var cmt = cmtInput.value;
-    request.open('GET','http://poovannancse.imad.hasura-app.io/submit-comment1?cmt=' + cmt,true);
+    request.open('GET','http://poovannancse.imad.hasura-app.io/article-one/submit-comment1?cmt=' + cmt,true);
     request.send(null);
 }; 
 //Submit name 
