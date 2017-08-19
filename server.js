@@ -99,10 +99,10 @@ app.get('/:articleName',function(req, res){
 });
 
 var names=[];
-app.get('/submit-name/:name', function(req, res) {
+app.get('/submit-name/', function(req, res) { //URL: /submit-name?name=xxxxx
    //Get the name from the request object
    //Extracted the name value
-   var name = req.params.name;
+   var name = req.query.name;
    //Concatenate to the list of names  
    names.push(name);
    // JSON : Java script object notation. Convert java script objects into array of strin
