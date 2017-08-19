@@ -1,4 +1,5 @@
 
+/*
 var submit_cmt = document.getElementById('submit_cmt');
 submit_cmt.onclick = function() {
     alert("inside onclick");
@@ -21,9 +22,10 @@ submit_cmt.onclick = function() {
     var cmtInput= document.getElementById('commentBodyField');
     var cmt = cmtInput.value;
     request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
-    request.send(null);*/
-};
+    request.send(null);
+}; */
 //Submit name 
+
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function() {
