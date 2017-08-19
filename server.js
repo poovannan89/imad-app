@@ -131,6 +131,8 @@ var cmtlist2=[];
 var cmtlist3=[];
 
 app.get('/:articleName/submit-comment/',function(req, res) {
+    
+    res.send("Hello from server");
     /*
     var articleName = req.params.articleName;
     var cmt = req.query.cmt;
