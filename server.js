@@ -130,9 +130,18 @@ var cmtlist1=[];
 var cmtlist2=[];
 var cmtlist3=[];
 
-app.get('/submit-comment/',function(req, res) {
-    
-            
+app.get('/:articleName/submit-comment/',function(req, res) {
+    var articleName = req.params.articleName;
+    if(articleName.toString().trim() == "article-one") {
+        
+    }
+    else if(articleName.toString().trim() == "article-two") {
+        
+    }
+    else 
+    {
+        
+    }
 });
 
 app.get('/:articleName',function(req, res){
