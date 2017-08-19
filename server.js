@@ -16,21 +16,26 @@ var articles = {
                 <p>
                     Axar is yet to make his debut in Test cricket, but has played 30 ODIs and seven T20 internationals. He has played 23 first-class matches and taken 79 wickets at 30.37. He has just finished playing the 50-over tri-series in South Africa with India A. He finished the team's third-highest wicket-taker in the series with seven wickets in four games and an economy rate of 4.11.
                 </p>
-    `
+    `,
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
 },
 'article-two' : {
     title: 'Article Two | Pooh',
     heading: 'Article Two',
     date: 'Aug 8, 2017',
-    content: `Content for second article
-    `
+    content: `Content for second article`,
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
 },
 'article-three' : {
     title: 'Article One | Pooh',
     heading: 'Article Three',
     date: 'Aug 9, 2017',
     content: `Content for 3rd article
-    `
+    `,
+    commentbox: `<textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>`,
+    submitcmt: '<input type="submit" value="Post Comment" id="submit_cmt"></input>'
 }
 };
 
@@ -65,9 +70,9 @@ function createTemplate (data) {
                    ${content}
                 </div>
                 <div>
-                <textarea name="commentBody" rows="4" cols="50" style="width:100%" id="commentBodyField" placeholder="Enter your comments..."></textarea>
+                    ${commentbox}
                 </div>
-                <input type="submit" value="Submit" id="submit_btn"></input>
+                ${submitcmt}
             </div>
             
         </body>
