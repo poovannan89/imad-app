@@ -130,7 +130,7 @@ var cmtlist1=[];
 var cmtlist2=[];
 var cmtlist3=[];
 
-app.get('/:articleName/submit-comment/',function(req, res) {
+app.get('/submit-comment/',function(req, res) {
     
     res.send("Hello from server");
     /*
