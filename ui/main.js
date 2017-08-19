@@ -34,8 +34,12 @@ submit.onclick = function() {
 var submit_cmt = document.getElementById('submit_cmt');
 submit_cmt.onclick = function() {
     alert("inside onclick");
-    /*
     var request = new XMLHttpRequest();
+    var cmtInput= document.getElementById('commentBodyField');
+    var cmt = cmtInput.value;
+    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
+    request.send(null);
+    /*
         request.onreadystatechange = function () {
         if (request.readyState == XMLHttpRequest.DONE) {
             if(request.status == 200) {
@@ -50,10 +54,7 @@ submit_cmt.onclick = function() {
             }
         }
     };
-    var cmtInput= document.getElementById('commentBodyField');
-    var cmt = cmtInput.value;
-    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment?cmt=' + cmt,true);
-    request.send(null);*/
+    */
 }; 
 //Submit name 
 
