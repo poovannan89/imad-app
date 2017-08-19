@@ -131,6 +131,7 @@ var cmtlist2=[];
 var cmtlist3=[];
 
 app.get('/:articleName/submit-comment/',function(req, res) {
+    /*
     var articleName = req.params.articleName;
     var cmt = req.query.cmt;
     if(articleName.toString().trim() == "article-one") {
@@ -145,7 +146,7 @@ app.get('/:articleName/submit-comment/',function(req, res) {
     {
         cmtlist3.push(cmt);
         res.send(JSON.stringify(cmtlist3));
-    }
+    }*/
 });
 
 app.get('/:articleName',function(req, res){
