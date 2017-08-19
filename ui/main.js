@@ -1,31 +1,23 @@
-var button = document.getElementById('counter');
-button.onclick = function() {
-    
-    
-    
-    
 
-};
-
-var submitcmt = document.getElementById('submit_cmt');
-submitcmt.onclick = function() {
+var submit_cmt = document.getElementById('submit_cmt');
+submit_cmt.onclick = function() {
+    
     var request = new XMLHttpRequest();
-    
-    request.onreadystatechange = function () {
+        request.onreadystatechange = function () {
         if (request.readyState == XMLHttpRequest.DONE) {
-            if (request.status == 200) {
-                var comments = request.responseText;
-                comments = JSON.parse(comments);
-                var listofcmts = '';
-                for(var i=0; i<comments.length;i++) {
-                    listofcmts += '<li>' + comments[i] + '</li>';
+            if(request.status == 200) {
+                var commentlist = request.responseText;
+                commentList = JSON.parse(commentList);
+                var list ='';
+                for(var i=0; i<commentList.length; i++) {
+                    list += '<li>' + commentList[i] + '</li>';
                 }
-                var ul = document.getElementById('commentlist');
-                ul.innerHTML = listofcmts;
+                    var ul = document.getElementById('commentlist');
+                    ul.innerHTML = list;
             }
         }
     };
-    request.open('GET','http://poovannancse.imad.hasura-app.io/submit-comment', true);
+    request.open('GET','http://poovannancse.imad.hasura-app.io/:articleName/submit-comment',true);
     request.send(null);
 };
 //Submit name 
